@@ -266,8 +266,7 @@ query MyQuery {
 
 When you execute the query, you should see the GraphQL server successfully return four event names:
 
-![Successful execution of the previously described query, in the GraphiQL explorer](./images/building-a-theme-events-test-query.png)
-
+![Successful execution of the previously described query, in the GraphiQL explorer]
 ## Create a data directory using the `onPreBootstrap` lifecycle
 
 Create a `gatsby-node.js` file in `gatsby-theme-events`.
@@ -488,7 +487,7 @@ yarn workspace gatsby-theme-events develop
 
 If you query this time for `allEvent`, you'll see the `Event` data, including the new slugs:
 
-![Successful execution of the previously described query, in the GraphiQL explorer](./images/building-a-theme-query-event-type.png)
+![Successful execution of the previously described query, in the GraphiQL explorer]
 
 ## Create data-driven pages using GraphQL and `createPages`
 
@@ -766,8 +765,7 @@ export default EventsTemplate
 
 To test that it's working, open up `http://localhost:8000/` again. You should see the "Gatsby Events Theme" header from `<Layout>` component, and the stringified event data from the `<EventList>` component.
 
-![The root path view, with a header of "Gatsby Events Theme", and stringified JSON event data](./images/building-a-theme-events-page-data.png)
-
+![The root path view, with a header of "Gatsby Events Theme", and stringified JSON event data]
 ### Update the event list component
 
 Update the event list component to use the `event` data in markup, rather than displaying the raw data:
@@ -811,7 +809,7 @@ export default EventList
 
 Checking `http://localhost:8000/` again, you should see the new markup:
 
-![The events page, shown with markup defined](./images/building-a-theme-events-page-markup.png)
+![The events page, shown with markup defined]
 
 ## Display and query data by id with context and static queries
 
@@ -890,7 +888,7 @@ export default Event
 
 To start off, as before, run `JSON.stringify` on the props data getting passed to the component to make sure you're getting the data you expect:
 
-![Successfully passing event data to individual event pages](./images/building-a-theme-individual-event-data.png)
+![Successfully passing event data to individual event pages]
 
 Data is logging on the individual event pages. As before, now update the component to use markup, rather than displaying the raw data:
 
@@ -918,7 +916,7 @@ export default Event
 
 Now, the individual event page reflects the updated markup:
 
-![Updated markup in individual event page template](./images/building-a-theme-individual-event-markup.png)
+![Updated markup in individual event page template]
 
 ## Style and format dates in React
 
@@ -1087,7 +1085,7 @@ Once this is running, you'll observe two things:
 
 However, you don't have any event data in the site. Copy the `events.yml` file from `gatsby-theme-events/data` into `site/events`. Then, restart the dev server:
 
-![Running the site, the basepath is now `/events`](./images/building-a-theme-changed-basepath.png)
+![Running the site, the basepath is now `/events`]
 
 The events listing page will now be accessible at `http://localhost:8000/events`. Hitting `http://localhost:8000/` will return a 404.
 
@@ -1265,7 +1263,7 @@ Run the site to see the theme changes that are starting to take effect:
 yarn workspace site develop
 ```
 
-![Theme UI changes starting to take effect on the site. For example, the header is now purple.](./images/building-a-theme-theme-ui-changes.png)
+![Theme UI changes starting to take effect on the site. For example, the header is now purple.]
 
 To continue applying theme styles, you can use the `Style` import from Theme UI. For example, in the `event-list.js` component, change the `<h1>`, `<ul>` and `<li>` elements to reference their themed styles:
 
@@ -1309,7 +1307,7 @@ export default EventList
 
 By replacing the `h1` with `Styled.h1`, `ul` with `Styled.ul`, and `li` with `Styled.li`, the theme styles for those elements have been applied:
 
-![Theme UI style changes showing on the events listing.](./images/building-a-theme-events-listing-styling.png)
+![Theme UI style changes showing on the events listing.]
 
 ## Publish a theme to npm
 
@@ -1431,7 +1429,7 @@ yarn global add gatsby-cli
 
 Making sure you're in your `/theme-test` directory, run `gatsby develop` to start the site.
 
-![The new site, running your new Gatsby theme.](./images/building-a-theme-running-theme.png)
+![The new site, running your new Gatsby theme.]
 
 ### Add some data
 
@@ -1447,7 +1445,7 @@ In your project, create a directory, `data`. Inside `data`, create a new file, `
 
 Save, and you'll see the new event data in your project:
 
-![The new site, with your new test event data.](./images/building-a-theme-add-test-event.png)
+![The new site, with your new test event data.]
 
 ## Use component shadowing to override theme components
 
@@ -1495,7 +1493,7 @@ yarn add lodash.merge
 
 Restart the dev server for `theme-test`. Your local site should now have a blue header instead of a purple one:
 
-![Test site, with banner color overridden.](./images/building-a-theme-override-colors.png)
+![Test site, with banner color overridden.]
 
 A few notable things are happening in this `index.js` file:
 
@@ -1537,7 +1535,7 @@ export default function Layout({ children }) {
 
 If you restart the development server, you'll see all of the styles and structure from the theme have been stripped away, because the component has been completely overridden:
 
-![Test site, with layout component overridden.](./images/building-a-theme-override-component.png)
+![Test site, with layout component overridden.]
 
 ## Conclusion
 
